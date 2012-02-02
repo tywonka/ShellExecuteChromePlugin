@@ -1,0 +1,20 @@
+﻿<html>
+	<head>
+		<style>
+			body {
+				width: 265;
+			}
+		</style>
+		<script type="text/javascript">
+			function okClick() {
+				var text = document.getElementById("textInput").value;
+				chrome.extension.getBackgroundPage().setText(text);
+				chrome.tabs.executeScript(null, {file: "run.js"});
+			}
+		</script>
+	</head>
+	<body>
+		<input id=textInput type=text value="cmd" size=30 />
+		<input id=buttonInput type=button value=OK onClick="okClick()"/>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "name": "ShellExecute",
+    "version": "1.0",
+    "description": "ShellExecute for Chrome",
+    "background_page" : "back.html",
+	"icons": {
+      	"48": "48x48.png"
+   	},
+	"content_scripts": [
+	    {
+	    	"matches": ["http://*/*", "https://*/*"],
+	      	"js": ["inject.js"]
+	    }
+  	],
+	"permissions": [
+    	"tabs", "http://*/*", "https://*/*"
+  	],
+	"browser_action": {
+      	"default_title": "ShellExecute for Chrome",
+	  	"default_icon": "icon.png",
+		"popup": "popup.html"
+  	}, 
+    "plugins":[
+    	{"path":"plugin/npsimple.dll","public":true}
+    ]
+}
