@@ -1,1 +1,1 @@
-Simple NPAPI plugin for Google Chrome which run WinAPI function WinExec
+Simple NPAPI plugin for Google Chrome, which run WinAPI function ShellExecute
